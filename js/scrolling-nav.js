@@ -27,3 +27,13 @@
   });
 
 })(jQuery); // End of use strict
+
+
+function sendMail() {
+  var link = "mailto:kontakt@intly.se"
+           + "&subject=" + encodeURIComponent("Intresseanmälan från " + document.getElementById('name').value + "på " + document.getElementById('company').value + ".")
+           + "&body=" + encodeURIComponent(document.getElementById('message').value)
+  ;
+  
+  window.location.href = link;
+}
